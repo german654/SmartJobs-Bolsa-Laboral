@@ -43,13 +43,13 @@
                 </a>
 
                 <ul class="nav">
-                    <li><a href="#" class="nav-link px-2 text-white">Buscar ofertas</a></li>
+                    <li><a href="./job_search.php" class="nav-link px-2 text-white">Buscar ofertas</a></li>
                     <li><a href="#" class="nav-link px-2 text-white">Evaluaciones de empresa</a></li>
                     <li><a href="#" class="nav-link px-2 text-white">Salarios</a></li>
                 </ul>
 
                 <div class="text-end">
-                    <a href="usuarios.php" class="btn btn-outline-light me-2 btn-usuarios">Usuarios</a>
+                    <a href="../admin/dashboard.php" class="btn btn-outline-light me-2 btn-usuarios">Usuarios</a>
                     <button type="button" class="btn btn-warning">Login</button>
                     <button type="button" class="btn btn-primary">Crear CV</button>
                 </div>
