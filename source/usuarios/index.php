@@ -10,7 +10,6 @@
             background-color: #f8f9fa;
         }
         .hero-section {
-            background-image: url('image.png'); /* Ruta de la imagen cargada */
             background-size: cover;
             background-position: center;
             height: 60vh;
@@ -44,8 +43,8 @@
 
                 <ul class="nav">
                     <li><a href="./job_search.php" class="nav-link px-2 text-white">Buscar ofertas</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Evaluaciones de empresa</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Salarios</a></li>
+                    <li><a href="./jobster.php" class="nav-link px-2 text-white">Evaluaciones de empresa</a></li>
+                    <li><a href="./jobster2.php" class="nav-link px-2 text-white">Salarios</a></li>
                 </ul>
 
                 <div class="text-end">

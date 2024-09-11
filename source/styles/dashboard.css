@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #fff;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f4f5f7;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+/* Estilos para los enlaces del menú */
+.menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #333;
+    background-color: transparent;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 16px;
+}
+
+.menu-item i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Efecto hover y selección */
+.menu-item:hover {
+    background-color: #e0e7ff;
+    color: #1d4ed8;
+}
+
+.menu-item:hover i {
+    color: #1d4ed8;
+}
+
+.menu-item.active {
+    background-color: #3b82f6;
+    color: white;
+    border-radius: 50px;
+}
+
+.menu-item.active i {
+    color: white;
+}
+
+/* Estilos para el badge de notificaciones */
+.badge {
+    background-color: #f97316;
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    margin-left: auto;
+}
+
+/* Estilos adicionales para la sección de insights */
+.insights {
+    margin-top: 20px;
+}
+
+.insights .menu-item {
+    margin-bottom: 10px;
+}
+
+.dashboard {
+    flex-grow: 1;
+    padding: 40px;
+}
+
+.header {
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stat-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.stat-item h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    color: #777;
+}
+
+.charts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.chart {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    height: 300px; /* Definir altura fija */
+    display: flex;
+    flex-direction: column;
+}
+
+canvas {
+    flex-grow: 1; /* Hacer que el canvas ocupe el espacio disponible dentro del contenedor */
+    max-height: 95%; /* Asegurar que el canvas no sobrepase la altura del contenedor */
+}
+
+
+@media (max-width: 768px) {
+    .stats, .charts {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+}
