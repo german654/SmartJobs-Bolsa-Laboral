@@ -28,46 +28,53 @@
 
   <!-- Main Section -->
   <section class="main-section">
-    
-    <div>
-      <h1>Get your dream job with Jobly.</h1>
-      <p>Find jobs, create trackable resumes and enrich your applications.</p>
-      <div class="search-bar">
-        <input type="text" placeholder="Job Title, Keywords...">
-        <button>Find Jobs</button>
+    <div class="main-content">
+      <!-- Contenido de texto en el lado izquierdo -->
+      <div class="text-content">
+        <h1>Get your dream job with Jobly.</h1>
+        <p>Find jobs, create trackable resumes and enrich your applications.</p>
+        <div class="search-bar">
+          <input type="text" placeholder="Job Title, Keywords...">
+          <button>Find Jobs</button>
+        </div>
+        <div class="categories">
+          <p>Popular Categories:</p>
+          <ul>
+            <li>Customer Services</li>
+            <li>Project Management</li>
+            <li>Development</li>
+          </ul>
+        </div>
       </div>
-      <div class="categories">
-        <p>Popular Categories:</p>
-        <ul>
-          <li>Customer Services</li>
-          <li>Project Management</li>
-          <li>Development</li>
-        </ul>
-      </div>
-    </div>
 
-    <!-- Circular Images -->
-    <div class="circle-container" id="circleContainer">
-        <div class="circle-item">
-            <img src="../images/user1.jpg" alt="User 1"  style="width: 100px; height: 100px;">
+      <!-- Circular Images y Background Circle en el lado derecho -->
+      <div class="circle-container" id="circleContainer">
+        <div class="circle-background"></div> <!-- Círculo punteado de fondo -->
+        <div class="circle-center">
+          <p>Jobly</p>
         </div>
         <div class="circle-item">
-            <img src="../images/user2.jpg" alt="User 2"  style="width: 100px; height: 100px;">
+            <img src="../images/user1.jpg" alt="User 1" style="width: 100px; height: 100px;">
         </div>
         <div class="circle-item">
-            <img src="../images/user3.jpg" alt="User 3"  style="width: 100px; height: 100px;">
+            <img src="../images/user2.jpg" alt="User 2" style="width: 100px; height: 100px;">
         </div>
         <div class="circle-item">
-            <img src="../images/user4.jpg" alt="User 4"  style="width: 100px; height: 100px;">
+            <img src="../images/user3.jpg" alt="User 3" style="width: 100px; height: 100px;">
         </div>
         <div class="circle-item">
-            <img src="../images/user5.jpg" alt="User 5"  style="width: 100px; height: 100px;">
+            <img src="../images/user4.jpg" alt="User 4" style="width: 100px; height: 100px;">
         </div>
         <div class="circle-item">
-            <img src="../images/user6.jpg" alt="User 6"  style="width: 100px; height: 100px;">
+            <img src="../images/user5.jpg" alt="User 5" style="width: 100px; height: 100px;">
         </div>
+        <div class="circle-item">
+            <img src="../images/user6.jpg" alt="User 6" style="width: 100px; height: 100px;">
+        </div>
+      </div>
     </div>
   </section>
+
 
   <script src="../scripts/jobster.js"></script>
 </body>

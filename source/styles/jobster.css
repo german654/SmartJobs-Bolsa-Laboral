@@ -1,157 +1,238 @@
 /* General Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #e6f2eb;
-    color: #333;
-    text-align: center;
-  }
-  
-  .navbar {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e6f2eb;
+  color: #333;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar .auth .login-btn {
+  background-color: #d5e8d4;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+.main-section {
+  padding: 50px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-  }
-  
-  .navbar .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  .navbar ul {
-    display: flex;
-    list-style: none;
-  }
-  
-  .navbar ul li {
-    margin: 0 15px;
-  }
-  
-  .navbar ul li a {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .navbar .auth .login-btn {
-    background-color: #d5e8d4;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .main-section {
-    padding: 50px 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .main-section h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #1d3b16;
-  }
-  
-  .main-section p {
-    margin-bottom: 40px;
-  }
-  
-  .search-bar {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .search-bar input {
-    padding: 10px;
-    width: 300px;
-    border-radius: 5px 0 0 5px;
-    border: 1px solid #ccc;
-  }
-  
-  .search-bar button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #6b8f57;
-    color: white;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-  }
-  
-  .categories {
-    margin-bottom: 40px;
-  }
-  
-  .categories ul {
-    list-style: none;
-    display: inline-flex;
-    gap: 10px;
-  }
-  
-  .categories li {
-    background-color: #f2f2f2;
-    padding: 5px 10px;
-    border-radius: 5px;
-  }
-  
-  .circle-container {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
+  flex-direction: column;
+}
+
+
+.main-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #1d3b16;
+}
+
+.main-section p {
+  margin-bottom: 40px;
+}
+
+/* Contenedor principal para el contenido de texto y el círculo */
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Contenido de texto a la izquierda */
+.text-content {
+  flex: 1;
+  margin-right: 50px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid #ccc;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #6b8f57;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.categories {
+  margin-bottom: 40px;
+}
+
+.categories ul {
+  list-style: none;
+  display: inline-flex;
+  gap: 10px;
+}
+
+.categories li {
+  background-color: #f2f2f2;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Círculo punteado de fondo */
+.circle-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 360px;
+  height: 360px;
+  margin-top: 30px;
+  margin-left: 30px;
+  border: 2px dashed #1d3b16;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Círculo central con la palabra Jobly */
+.circle-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: 35px;
+  margin-left: 35px;
+  background-color: #1d3b16;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  display: flex; /* Usamos flexbox para centrar el texto */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* Círculo central */
+.center-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-top: 35px;
+  margin-left: 35px;
+  background-color: #1d3b16;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.center-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #1d3b16;
+  color: white;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Circular container and items */
+.circle-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 50px auto; /* Mueve el círculo más abajo */
+  transform: rotate(0deg);
+  flex-shrink: 0;
+  animation: spin 20s infinite linear;
+}
+
+.circle-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.circle-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Animación de rotación */
+@keyframes spin {
+  from {
     transform: rotate(0deg);
-    animation: spin 20s infinite linear;
   }
-  
-  .circle-item {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 1s ease;
+  to {
+    transform: rotate(360deg);
   }
-  
-  .circle-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
   }
-  
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+
+  .circle-container {
+    flex-direction: row;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .navbar ul {
-      display: none;
-    }
-  
-    .circle-container {
-      flex-direction:row;
-    }
-  
-    .search-bar input {
-      width: 200px;
-    }
+
+  .search-bar input {
+    width: 200px;
   }
-  
+}
