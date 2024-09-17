@@ -108,3 +108,11 @@ CREATE TABLE IF NOT EXISTS comentarios
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_general_ci;
+
+# -- Candidato
+# correo: infoeliasar@gmail.com
+# contraseña: Soloyo_12
+
+# -- Empresa
+# correo: infoeliasar@gmail.com
+# contraseña: 123
