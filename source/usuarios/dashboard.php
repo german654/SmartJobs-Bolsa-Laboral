@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jobster Dashboard</title>
+    <title>Jobly Dashboard</title>
     <link rel="stylesheet" href="../styles/dashboard.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js para los gráficos -->
 </head>
 <body>
     <div class="container">
         <aside class="sidebar">
-            <div class="logo">jobster</div>
+            <div class="logo">Jobly</div>
             <nav class="menu">
                 <a href="#" class="menu-item active">
                     <i class="fas fa-home"></i> Dashboard
@@ -77,5 +77,6 @@
     </div>
 
     <script src="../scripts/dashboard.js"></script> <!-- Archivo de JavaScript -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>

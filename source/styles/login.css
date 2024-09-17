@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #e0f2e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+h1 {
+    color: #073d2d;
+    margin-bottom: 1rem;
+}
+
+.role-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.role-toggle button {
+    background-color: #fff;
+    border: 2px solid #073d2d;
+    padding: 10px 20px;
+    cursor: pointer;
+    flex: 1;
+    transition: background-color 0.3s ease;
+}
+
+.role-toggle button.active {
+    background-color: #073d2d;
+    color: #fff;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+}
+
+.terms label {
+    margin-left: 10px;
+    font-size: 0.9rem;
+}
+
+.terms a {
+    color: #073d2d;
+    text-decoration: none;
+}
+
+.sign-up-btn, .google-btn {
+    background-color: #073d2d;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sign-up-btn:hover, .google-btn:hover {
+    background-color: #055841;
+}
+
+.alternative {
+    margin: 1rem 0;
+    color: #888;
+}
+
+p a {
+    color: #073d2d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .form-container {
+        padding: 1rem;
+    }
+}
