@@ -2,9 +2,10 @@
 // Recibir los datos enviados desde el formulario de inicio de sesión
 $var_correo = $_POST["email"];
 $var_password = $_POST["password"];
-$var_rol = isset($_POST["role"]) && $_POST["role"] === 'employer' ? 'Empleador' : 'Candidato';
+$var_rol = isset($_POST["role"]) && $_POST["role"] === 'employer' ? 'Empresa' : 'Candidato';
 
 // Conectar a la base de datos
+include("../../config/config.php");
 include("../../config/config.php");
 $conexion = new mysqli(SERVIDOR, USUARIO, PASSWORD, BASE_DE_DATOS);
 
@@ -29,7 +30,7 @@ if ($result->num_rows > 0) {
         if ($var_rol === 'Candidato') {
             header('Location: job_search.php');  // Redirigir al dashboard de Candidato
         } else {
-            header('Location: empresa_dashboard.php');  // Redirigir al dashboard de Empresa
+            header('Location: empresa.php');  // Redirigir al dashboard de Empresa
         }
     } else {
         // Contraseña incorrecta
