@@ -5,42 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - Gestión de Vacantes</title>
     <link rel="stylesheet" href="../styles/dashboard_empresa.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js para los gráficos -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
 <div class="container">
     <!-- Sidebar -->
     <aside class="sidebar">
-        <div class="logo">ACE</div>
+        <div class="toggle-sidebar" id="toggle-sidebar">
+            <i class="bx bx-menu"></i>
+        </div>
+        <div class="logo">
+            <i class="bx bxl-codepen"></i>
+            <span>CodeComerce</span>
+        </div>
         <nav class="menu">
-            <a href="#" class="menu-item">
-                <i class="fas fa-th"></i> Dashboard
-            </a>
-            <a href="#" class="menu-item">
-                <i class="fas fa-building"></i> Department
-            </a>
-            <a href="#" class="menu-item">
-                <i class="fas fa-list"></i> Position
-            </a>
-            <a href="#" class="menu-item">
-                <i class="fas fa-user"></i> User
-            </a>
-            <a href="#" class="menu-item active">
-                <i class="fas fa-briefcase"></i> Vacancy
-                <ul class="submenu">
-                    <li><a href="#" class="menu-item">Add Vacancy</a></li>
-                    <li><a href="#" class="menu-item">Vacancy List</a></li>
-                </ul>
-            </a>
-            <a href="#" class="menu-item">
-                <i class="fas fa-users"></i> Candidate
-            </a>
-            <a href="#" class="menu-item">
-                <i class="fas fa-calendar-check"></i> Interview
-            </a>
-            <a href="#" class="menu-item">
-                <i class="fas fa-envelope"></i> Mail History
-            </a>
+            <ul class="menu-list">
+                <li>
+                    <a href="#" class="menu-item">
+                        <i class="bx bx-home"></i>
+                        <span class="nav-item">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item">
+                        <i class="bx bx-buildings"></i>
+                        <span class="nav-item">Department</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item">
+                        <i class="bx bx-list-ul"></i>
+                        <span class="nav-item">Position</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item">
+                        <i class="bx bx-user"></i>
+                        <span class="nav-item">User</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item active">
+                        <i class="bx bx-briefcase"></i>
+                        <span class="nav-item">Vacancy</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item">
+                        <span class="submenu-item">Add Vacancy</span>
+                    </a></li>
+                <li>
+                    <a href="#" class="menu-item">
+                        <span class="submenu-item">Add Vacancy</span>
+                    </a></li>
+                <li>
+                    <a href="#" class="menu-item">
+                        <i class="bx bx-group"></i>
+                        <span class="nav-item">Candidate</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item">
+                        <i class="bx bx-calendar-check"></i>
+                        <span class="nav-item">Interview</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item">
+                        <i class="bx bx-envelope"></i>
+                        <span class="nav-item">Mail History</span>
+                    </a>
+                </li>
+            </ul>
         </nav>
     </aside>
 
@@ -64,17 +100,32 @@
             </div>
         </header>
 
-        <!-- Add Vacancy Form -->
+        <!-- Modificación del formulario HTML -->
         <section class="add-vacancy-form">
-            <form id="vacancy-form">
+            <form id="vacancy-form" action="register_vacancy.php" method="POST">
                 <div class="form-row">
                     <label for="position">Position</label>
-                    <input type="text" id="position" placeholder="e.g., Java Developer" required>
+                    <input type="text" id="position" name="titulo" placeholder="e.g., Java Developer" required>
                 </div>
 
                 <div class="form-row">
                     <label for="department">Department</label>
-                    <input type="text" id="department" placeholder="e.g., Banking" required>
+                    <input type="text" id="department" name="categoria" placeholder="e.g., Banking" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" name="lugar" placeholder="e.g., Remote" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="schedule">Schedule</label>
+                    <input type="text" id="schedule" name="horario" placeholder="e.g., Full-time" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="salary">Salary</label>
+                    <input type="number" id="salary" name="remuneracion" step="0.01" placeholder="e.g., 50000.00" required>
                 </div>
 
                 <div class="form-row">
@@ -92,13 +143,15 @@
 
                 <div class="form-row">
                     <label for="description">Description</label>
-                    <textarea id="description" rows="4" placeholder="Write the job description..."></textarea>
+                    <textarea id="description" name="descripcion" rows="4" placeholder="Write the job description..."></textarea>
                 </div>
 
                 <div class="form-row">
                     <label for="responsibilities">Responsibilities</label>
                     <textarea id="responsibilities" rows="4" placeholder="List the responsibilities..."></textarea>
                 </div>
+
+                <input type="hidden" name="id_empresa" value="1"> <!-- ID de la empresa, puedes cambiarlo dinámicamente -->
 
                 <button type="submit" class="btn-submit">Submit Vacancy</button>
             </form>

@@ -16,18 +16,33 @@ body {
 }
 
 .sidebar {
-    background-color: #eef1f5;
+    background-color: #073d2d;
     width: 250px;
     padding: 1rem;
     position: fixed;
     height: 100vh;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.sidebar.collapsed {
+    width: 70px;
+}
+
+.toggle-sidebar {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    text-align: center;
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: bold;
-    color: #073d2d;
+    color: #fff;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .menu {
@@ -36,11 +51,12 @@ body {
 }
 
 .menu-item {
-    display: block;
+    display: flex;
+    align-items: center;
     padding: 1rem;
     margin-bottom: 1rem;
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-weight: 500;
     border-radius: 8px;
     transition: background-color 0.3s;
@@ -48,11 +64,12 @@ body {
 
 .menu-item.active {
     background-color: #a5d5c6;
-    color: #fff;
+    color: #073d2d;
 }
 
 .menu-item i {
     margin-right: 10px;
+    font-size: 1.2rem;
 }
 
 .menu-item:hover {
@@ -60,14 +77,63 @@ body {
     color: #073d2d;
 }
 
+/* Estilos para el submenu */
 .submenu {
-    margin-left: 20px;
+    list-style: none; /* Quita los puntos por defecto de la lista */
+    padding: 0;
+    margin: 0;
+    background-color: #f8f9fa; /* Fondo claro para el submenu */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estilos para los elementos del submenu */
+.submenu-item {
+    display: block;
+    padding: 10px 20px;
+    color: #333; /* Color de texto */
+    text-decoration: none; /* Quita subrayado de los enlaces */
+    font-size: 14px; /* Tamaño de texto */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+}
+
+/* Estilo cuando se hace hover sobre un elemento del submenu */
+.submenu-item:hover {
+    background-color: #e2e6ea; /* Fondo más oscuro en hover */
+    color: #007bff; /* Cambia el color del texto en hover */
+    cursor: pointer;
+}
+
+/* Estilo opcional para el submenu cuando está visible */
+.submenu-item.active {
+    background-color: #007bff; /* Color de fondo para el elemento activo */
+    color: white; /* Texto blanco en el elemento activo */
+}
+
+.menu-item.active .submenu {
+    display: block;
+}
+
+.submenu-item {
+    color: #59b096;
+    font-size: 0.9rem;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .dashboard {
     margin-left: 260px;
     padding: 2rem;
     width: calc(100% - 260px);
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.collapsed + .dashboard {
+    margin-left: 70px;
+    width: calc(100% - 70px);
 }
 
 .header {
@@ -105,21 +171,6 @@ body {
     border-radius: 8px;
     padding: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.notification-popup p {
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-}
-
-.notification-popup button {
-    background: #073d2d;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 5px;
 }
 
 .add-vacancy-form {
@@ -169,4 +220,25 @@ body {
 
 .btn-submit:hover {
     background-color: #055841;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .dashboard {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+    }
+
+    .sidebar {
+        width: 70px;
+    }
+
+    .sidebar.collapsed {
+        width: 0;
+    }
+
+    .sidebar.collapsed + .dashboard {
+        margin-left: 0;
+        width: 100%;
+    }
 }
